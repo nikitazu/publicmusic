@@ -8,12 +8,21 @@ leftHand = \new Staff {
 	\clef "treble"
 	\key c \major
 	\repeat volta 2 {
-		c2 f c g
-        c f
+		c4 r             % C
+        c' r             % F
+        r g8 e8          % C
+        g4 g4            % G
+        
+        c4 r             % C
+        f, r             % F
 	}
 	\alternative {
-		{ g c }
-		{ g c, }
+		{ r4 g8 e8       % G
+          c4 c           % C
+        }
+		{ g8 g8 r4       % G
+          c4 c           % C
+        }
 	}
 }
 
@@ -23,12 +32,21 @@ rightHand = \new Staff {
 	\clef "bass"
 	\key c \major
 	\repeat volta 2 {
-		c4 <e g> f <a c> c, <e g> g, <b d>
-        c  <e g> f <a c>
+		c4 <e g>         % C
+        f  <a c>         % F
+        c, <e g>         % C
+        g, <b d>         % G
+                         
+        c  <e g>         % C
+        f  <a c>         % F
 	}
 	\alternative {
-		{ g  <b d> c  <e g> }
-		{ g, <b d> c, <e g> }
+		{ g4 <b d>       % G
+          c4 <e g>       % C
+        }
+		{ <g, b d>2      % G
+          c,4 <e g>      % C
+        }
 	}
 }
 
