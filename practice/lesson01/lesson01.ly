@@ -23,12 +23,12 @@ rightHand = \new Staff {
 	\clef "bass"
 	\key c \major
 	\repeat volta 2 {
-		<c e g>2 <f a c> <c e g> <g b d>
-        <c e g> <f a c>
+		c4 <e g> f <a c> c, <e g> g, <b d>
+        c  <e g> f <a c>
 	}
 	\alternative {
-		{ <g b d> <c e g> }
-		{ <g b d> <c, e g> }
+		{ g  <b d> c  <e g> }
+		{ g, <b d> c, <e g> }
 	}
 }
 
