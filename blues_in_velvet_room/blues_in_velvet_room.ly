@@ -1,20 +1,22 @@
 % LilyBin
+% Blues in Velvet Room
+% from Persona 3 OST
+% by Shouji Meguro
+
+% T S T D  T T S D
 
 leftHand = \new Staff {
 	\time 4/4
 	\tempo "Allegro" 4 = 120
 	\clef "treble"
 	\key c \major
-    
-    \set Staff.midiMinimumVolume = #0.5
-    \set Staff.midiMaximumVolume = #0.9
-    
 	\repeat volta 2 {
-		c
+		c1 f c g
+        c c
 	}
 	\alternative {
-		{ d }
-		{ e }
+		{ f g }
+		{ f g }
 	}
 }
 
@@ -23,16 +25,13 @@ rightHand = \new Staff {
 	\tempo "Allegro" 4 = 120
 	\clef "bass"
 	\key c \major
-    
-    \set Staff.midiMinimumVolume = #0.2
-    \set Staff.midiMaximumVolume = #0.6
-    
 	\repeat volta 2 {
-		c
+		c8  <e g>2.. f8 <a c>2.. c,8 <e g>2.. g8 <b d>2..
+        c,8 <e g>2.. c8 <e g>2..
 	}
 	\alternative {
-		{ d }
-		{ e }
+		{ f8 <a c>2.. g8 <b d>2.. }
+		{ f8 <a c>2.. g8 <b d>2.. }
 	}
 }
 
