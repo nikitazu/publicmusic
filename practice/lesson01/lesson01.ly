@@ -4,7 +4,7 @@
 
 leftHand = \new Staff {
 	\time 2/4
-	\tempo "Allegro" 4 = 100
+	\tempo "Andante" 4 = 100
 	\clef "treble"
 	\key c \major
     
@@ -32,7 +32,7 @@ leftHand = \new Staff {
 
 rightHand = \new Staff {
 	\time 2/4
-	\tempo "Allegro" 4 = 100
+	\tempo "Andante" 4 = 100
 	\clef "bass"
 	\key c \major
     
