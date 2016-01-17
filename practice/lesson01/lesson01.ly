@@ -49,8 +49,8 @@ rightHand = \new Staff {
         f  <a c>         % F
 	}
 	\alternative {
-		{ g4 <b d>       % G
-          c4 <e g>       % C
+		{ g,4 <b d>      % G
+          c4  <e g>      % C
         }
 		{ <g, b d>2      % G
           c,4 <e g>      % C
