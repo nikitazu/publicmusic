@@ -36,8 +36,8 @@ rightHand = \new Staff {
 	\clef "bass"
 	\key c \major
     
-    \set Staff.midiMinimumVolume = #0.2
-    \set Staff.midiMaximumVolume = #0.6
+    \set Staff.midiMinimumVolume = #0.3
+    \set Staff.midiMaximumVolume = #0.7
     
 	\repeat volta 2 {
 		c4 <e g>         % C
