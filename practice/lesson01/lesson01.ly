@@ -7,6 +7,10 @@ leftHand = \new Staff {
 	\tempo "Allegro" 4 = 100
 	\clef "treble"
 	\key c \major
+    
+    \set Staff.midiMinimumVolume = #0.5
+    \set Staff.midiMaximumVolume = #0.9
+    
 	\repeat volta 2 {
 		c4 r             % C
         c' r             % F
@@ -31,6 +35,10 @@ rightHand = \new Staff {
 	\tempo "Allegro" 4 = 100
 	\clef "bass"
 	\key c \major
+    
+    \set Staff.midiMinimumVolume = #0.2
+    \set Staff.midiMaximumVolume = #0.6
+    
 	\repeat volta 2 {
 		c4 <e g>         % C
         f  <a c>         % F
