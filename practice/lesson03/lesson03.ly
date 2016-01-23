@@ -74,10 +74,10 @@ drumsLeftLeg = \drummode {
     }
     \alternative {
         { bd4 sn       % G
-          bd4 sn       % C
+          bd4 bd       % C
         }
-        { bd4 sn       % G
-          bd4 sn       % C
+        { bd8 bd r4    % G
+          bd4 r        % C
         }
     }
 }
@@ -96,8 +96,8 @@ drumsRightLeg = \drummode {
         { hh8 hh hh hh       % G
           hh8 hh hh hh       % C
         }
-        { hh8 hh hh hh       % G
-          hh8 hh hh hh       % C
+        { r2                 % G
+          r2                 % C
         }
     }
 }
