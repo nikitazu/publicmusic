@@ -1,5 +1,6 @@
 % LilyBin
 % Период
+% Простая мелодия с аккордами
 % T S T D T S D T
 
 leftHand = \new Staff {
