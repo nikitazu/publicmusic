@@ -62,32 +62,57 @@ rightHand = \new Staff {
 	}
 }
 
+drumsLeftLeg = \drummode {
+    \repeat volta 2 {
+        bd4 sn         % C
+        bd4 sn         % F
+        bd4 sn         % C
+        bd4 sn         % G
+                         
+        bd4 sn         % C
+        bd4 sn         % F
+    }
+    \alternative {
+        { bd4 sn       % G
+          bd4 sn       % C
+        }
+        { bd4 sn       % G
+          bd4 sn       % C
+        }
+    }
+}
+
+drumsRightLeg = \drummode {
+    \repeat volta 2 {
+        hh8 hh hh hh         % C
+        hh8 hh hh hh         % F
+        hh8 hh hh hh         % C
+        hh8 hh hh hh         % G
+                         
+        hh8 hh hh hh         % C
+        hh8 hh hh hh         % F
+    }
+    \alternative {
+        { hh8 hh hh hh       % G
+          hh8 hh hh hh       % C
+        }
+        { hh8 hh hh hh       % G
+          hh8 hh hh hh       % C
+        }
+    }
+}
+
+
 drumsLeg = \new DrumStaff {
 	\time 2/4
 	\tempo "Andante" 4 = 100
     
     \set Staff.midiMinimumVolume = #0.3
     \set Staff.midiMaximumVolume = #0.7
-    
-    \drummode {
-        \repeat volta 2 {
-            bd4 hh         % C
-            bd4 hh         % F
-            bd4 hh         % C
-            bd4 hh         % G
-                             
-            bd4 hh         % C
-            bd4 hh         % F
-        }
-        \alternative {
-            { bd4 hh       % G
-              bd4 hh       % C
-            }
-            { bd4 hh       % G
-              bd4 hh       % C
-            }
-        }
-    }
+    <<
+        \new DrumVoice { \voiceTwo \drumsRightLeg }
+        \new DrumVoice { \voiceOne \drumsLeftLeg }
+    >>
 }
 
 main =  {
