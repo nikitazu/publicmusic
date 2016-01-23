@@ -26,8 +26,8 @@ myAcc = \new Staff {
 	\clef "bass"
 	\key c \major
     
-    \set Staff.midiMinimumVolume = #0.2
-    \set Staff.midiMaximumVolume = #0.6
+    \set Staff.midiMinimumVolume = #0.3
+    \set Staff.midiMaximumVolume = #0.7
     
 	\repeat volta 2 {
 		c
@@ -66,8 +66,8 @@ drumsTrack = \new DrumStaff {
 	\time 4/4
 	\tempo "Allegro" 4 = 120
     
-    \set Staff.midiMinimumVolume = #0.2
-    \set Staff.midiMaximumVolume = #0.6
+    \set DrumStaff.midiMinimumVolume = #0.2
+    \set DrumStaff.midiMaximumVolume = #0.5
     <<
         \new DrumVoice { \voiceTwo \drumsAcc }
         \new DrumVoice { \voiceOne \drumsMain }
