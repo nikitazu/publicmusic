@@ -2,7 +2,7 @@
 
 \version "2.18.2"
 
-leftHand = \new Staff {
+myMelody = \new Staff {
 	\time 4/4
 	\tempo "Allegro" 4 = 120
 	\clef "treble"
@@ -20,7 +20,7 @@ leftHand = \new Staff {
 	}
 }
 
-rightHand = \new Staff {
+myAcc = \new Staff {
 	\time 4/4
 	\tempo "Allegro" 4 = 120
 	\clef "bass"
@@ -40,8 +40,8 @@ rightHand = \new Staff {
 
 main =  {
 	<<
-	\relative c'' { \leftHand }
-	\relative c { \rightHand }
+	\relative c'' { \myMelody }
+	\relative c { \myAcc }
 	>>
 }
 
