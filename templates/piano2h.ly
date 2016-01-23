@@ -1,5 +1,7 @@
 % LilyBin
 
+\version "2.18.2"
+
 leftHand = \new Staff {
 	\time 4/4
 	\tempo "Allegro" 4 = 120

@@ -6,6 +6,8 @@
 % Простейшая барабанная дорожка
 % T S T D T S D T
 
+\version "2.18.2"
+
 myMelody = \new Staff {
 	\time 2/4
 	\tempo "Andante" 4 = 100
