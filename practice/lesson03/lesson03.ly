@@ -3,6 +3,7 @@
 % Простая мелодия с аккордами
 % Финальный аккорд сделан "картошкой", для придания ему "финальности"
 % Последний аккорд первого повтора сделан мощнее
+% Простейшая барабанная дорожка
 % T S T D T S D T
 
 leftHand = \new Staff {
@@ -61,10 +62,39 @@ rightHand = \new Staff {
 	}
 }
 
+drumsLeg = \new DrumStaff {
+	\time 2/4
+	\tempo "Andante" 4 = 100
+    
+    \set Staff.midiMinimumVolume = #0.3
+    \set Staff.midiMaximumVolume = #0.7
+    
+    \drummode {
+        \repeat volta 2 {
+            bd4 hh         % C
+            bd4 hh         % F
+            bd4 hh         % C
+            bd4 hh         % G
+                             
+            bd4 hh         % C
+            bd4 hh         % F
+        }
+        \alternative {
+            { bd4 hh       % G
+              bd4 hh       % C
+            }
+            { bd4 hh       % G
+              bd4 hh       % C
+            }
+        }
+    }
+}
+
 main =  {
 	<<
 	\relative c'' { \leftHand }
 	\relative c { \rightHand }
+    { \drumsLeg }
 	>>
 }
 
