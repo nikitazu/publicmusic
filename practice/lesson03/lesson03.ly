@@ -103,7 +103,7 @@ drumsAcc = \drummode {
 }
 
 
-drumsLeg = \new DrumStaff {
+drumsTrack = \new DrumStaff {
 	\time 2/4
 	\tempo "Andante" 4 = 100
     
@@ -119,7 +119,7 @@ main =  {
 	<<
 	\relative c'' { \myMelody }
 	\relative c { \myAcc }
-    { \drumsLeg }
+    { \drumsTrack }
 	>>
 }
 
