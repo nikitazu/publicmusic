@@ -6,7 +6,7 @@
 % Простейшая барабанная дорожка
 % T S T D T S D T
 
-leftHand = \new Staff {
+myMelody = \new Staff {
 	\time 2/4
 	\tempo "Andante" 4 = 100
 	\clef "treble"
@@ -34,7 +34,7 @@ leftHand = \new Staff {
 	}
 }
 
-rightHand = \new Staff {
+myAcc = \new Staff {
 	\time 2/4
 	\tempo "Andante" 4 = 100
 	\clef "bass"
@@ -62,7 +62,7 @@ rightHand = \new Staff {
 	}
 }
 
-drumsLeftLeg = \drummode {
+drumsMain = \drummode {
     \repeat volta 2 {
         bd4 sn         % C
         bd4 sn         % F
@@ -82,7 +82,7 @@ drumsLeftLeg = \drummode {
     }
 }
 
-drumsRightLeg = \drummode {
+drumsAcc = \drummode {
     \repeat volta 2 {
         hh8 hh hh hh         % C
         hh8 hh hh hh         % F
@@ -110,15 +110,15 @@ drumsLeg = \new DrumStaff {
     \set Staff.midiMinimumVolume = #0.3
     \set Staff.midiMaximumVolume = #0.7
     <<
-        \new DrumVoice { \voiceTwo \drumsRightLeg }
-        \new DrumVoice { \voiceOne \drumsLeftLeg }
+        \new DrumVoice { \voiceTwo \drumsAcc }
+        \new DrumVoice { \voiceOne \drumsMain }
     >>
 }
 
 main =  {
 	<<
-	\relative c'' { \leftHand }
-	\relative c { \rightHand }
+	\relative c'' { \myMelody }
+	\relative c { \myAcc }
     { \drumsLeg }
 	>>
 }
