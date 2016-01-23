@@ -68,14 +68,14 @@ drumsMain = \drummode {
     \repeat volta 2 {
         bd4 sn         % C
         bd4 sn         % F
-        bd4 sn         % C
+        bd4 sn8 sn     % C
         bd4 sn         % G
                          
-        bd4 sn         % C
+        bd4 sn8 sn     % C
         bd4 sn         % F
     }
     \alternative {
-        { bd4 sn       % G
+        { sn8 sn sn r  % G
           bd4 bd       % C
         }
         { bd8 bd r4    % G
