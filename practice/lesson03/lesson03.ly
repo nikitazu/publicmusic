@@ -109,8 +109,8 @@ drumsTrack = \new DrumStaff {
 	\time 2/4
 	\tempo "Andante" 4 = 100
     
-    \set Staff.midiMinimumVolume = #0.3
-    \set Staff.midiMaximumVolume = #0.7
+    \set DrumStaff.midiMinimumVolume = #0.2
+    \set DrumStaff.midiMaximumVolume = #0.5
     <<
         \new DrumVoice { \voiceTwo \drumsAcc }
         \new DrumVoice { \voiceOne \drumsMain }
