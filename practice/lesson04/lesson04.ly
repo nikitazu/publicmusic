@@ -15,6 +15,7 @@ myMelody = \new Staff {
 	\clef "treble"
 	\key c \major
     
+    \set Staff.midiInstrument = #"acoustic grand"
     \set Staff.midiMinimumVolume = #0.5
     \set Staff.midiMaximumVolume = #0.9
     
@@ -43,6 +44,7 @@ myAcc = \new Staff {
 	\clef "bass"
 	\key c \major
     
+    \set Staff.midiInstrument = #"acoustic grand"
     \set Staff.midiMinimumVolume = #0.3
     \set Staff.midiMaximumVolume = #0.7
     
@@ -71,8 +73,9 @@ myBass = \new Staff {
 	\clef "bass"
 	\key c \major
     
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.5
+    \set Staff.midiInstrument = #"electric bass (finger)"
+    \set Staff.midiMinimumVolume = #0.3
+    \set Staff.midiMaximumVolume = #0.4
     
 	\repeat volta 2 {
 		c4.  c8      % C
@@ -139,7 +142,7 @@ drumsTrack = \new DrumStaff {
 	\tempo "Andante" 4 = 100
     
     \set DrumStaff.midiMinimumVolume = #0.2
-    \set DrumStaff.midiMaximumVolume = #0.5
+    \set DrumStaff.midiMaximumVolume = #0.3
     <<
         \new DrumVoice { \voiceTwo \drumsAcc }
         \new DrumVoice { \voiceOne \drumsMain }
@@ -150,7 +153,7 @@ main =  {
 	<<
 	\relative c'' { \myMelody }
 	\relative c { \myAcc }
-    \relative c { \myBass }
+    \relative c, { \myBass }
     { \drumsTrack }
 	>>
 }
