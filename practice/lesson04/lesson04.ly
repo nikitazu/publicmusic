@@ -75,7 +75,7 @@ myBass = \new Staff {
     
     \set Staff.midiInstrument = #"electric bass (finger)"
     \set Staff.midiMinimumVolume = #0.3
-    \set Staff.midiMaximumVolume = #0.4
+    \set Staff.midiMaximumVolume = #0.5
     
 	\repeat volta 2 {
 		c4.  c8      % C
@@ -142,7 +142,7 @@ drumsTrack = \new DrumStaff {
 	\tempo "Andante" 4 = 100
     
     \set DrumStaff.midiMinimumVolume = #0.2
-    \set DrumStaff.midiMaximumVolume = #0.3
+    \set DrumStaff.midiMaximumVolume = #0.5
     <<
         \new DrumVoice { \voiceTwo \drumsAcc }
         \new DrumVoice { \voiceOne \drumsMain }
